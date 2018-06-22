@@ -1,0 +1,129 @@
+.unit_txt1{
+  background: #ffffff;
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  margin: 20rpx 0;
+  border-top: solid 1px #e5e5e5;
+  border-bottom: solid 1px #e5e5e5;
+  color: #000000;
+  font-size: 34rpx;
+  text-indent: 30rpx; 
+}
+.from_page{
+  display: block;
+  background: #fff;
+  width: calc(100% - 30rpx);
+  padding-left: 30rpx;
+  border-top: solid 1px #e5e5e5;
+  border-bottom: solid 1px #e5e5e5;
+}
+.frow_row{
+  display: block;
+  height: 88rpx;
+  line-height: 88rpx;
+  position: relative;
+  border-bottom: solid 1px #e5e5e5;
+}
+.frow_row .unit_title{
+  display: inline-block;
+  color: #000000;
+  font-size: 34rpx;
+}
+.frow_row .unit_txt2{
+  display: inline-block;
+  width: calc(100% - 180rpx);
+  height: 88rpx;
+  line-height: 88rpx;
+  padding-left: 180rpx;
+  font-size: 34rpx;
+  color: #000000;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.frow_row .icon-iconfontjiantou5{
+  position: absolute;
+  right: 30rpx;
+  top: 0;
+  color: #c7c7cc;
+  font-size: 48rpx;
+}
+.unit-btn{
+  display: block;
+  margin: 0 auto;
+  width: 92%;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #1f8de3;
+  color: #fff;
+  font-size: 36rpx;
+  margin-top: 60rpx;
+}
+
+.card_infobox{
+  background: #fff;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  overflow-x: hidden;
+}
+.card_infobox .card_infobox_row{
+  border-top: solid 1px #e4e4e4;
+   padding: 0 30rpx; 
+  height: 88rpx;
+  line-height: 88rpx;
+  position: relative;
+  display:block;
+}
+.card_infobox .card_infobox_row view{
+  display: block;
+  color: #888888;
+}
+.card_infobox .card_infobox_row .card_name{
+  color: #000;
+  font-size: 34rpx;
+}
+.card_infobox .active .card_name{
+  color: #1f8de3;
+}
+.card_infobox .icon-finish{
+  color: #1f8de3;
+  font-size: 60rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 60rpx;
+}
+.radio-group radio {
+  background: none;
+  border: 0;
+}
+radio .wx-radio-input {
+  position: absolute;
+  width: 60rpx;
+  right: 30rpx;
+  top: 30rpx;
+  background: none;
+  border: 0;
+}
+radio .wx-radio-input.wx-radio-input-checked {
+ background-color:transparent;
+  border-color:#FF2150;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+ 
+radio .wx-radio-input.wx-radio-input-checked::before {
+  content: "\e659";
+  font-family:"iconfont" !important;
+  font-size:70rpx;
+  color: #1f8de3;
+  position: absolute;
+  top:10rpx;
+  right:30rpx;
+  width: 70rpx;
+}
+.card_infobox radio[checked].card_infobox_row .card_name{
+  color: #1f8de3;
+}

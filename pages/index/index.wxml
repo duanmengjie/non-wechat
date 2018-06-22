@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="topbar">
+    <image src='../../images/banner.png'></image>
+  </view>
+  <view class="topmenu">
+    <view class="topmenu_row {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">
+      按身份信息
+    </view>
+    <view class="topmenu_row {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">
+      按执收单位
+    </view>
+  </view>
+  <swiper current="{{currentTab}}" duration="300" bindchange="swiperTab" class="swiper_box">
+    <swiper-item>
+      <view class="card-tab">
+        <view class="section-card">
+          <text class='section-card-title' bindtap='selectEvent'>{{identity_name}}</text>
+          <icon class="iconfont icon_name {{select_identity?'icon-quanxianfuzhi':'icon-arrow_down_full'}}"/>
+          <input type="idcard" placeholder="请输入证件号" class='card-inpt' bindinput="bindKeyInput" maxlength="18" value="{{value}}" wx:if="{{identity_index==0}}"/>
+          <input type="text" placeholder="请输入证件号" class='card-inpt' bindinput="bindKeyInput" maxlength="18" value="{{value}}" wx:if="{{identity_index==1}}"/>
+          <input type="text" placeholder="请输入证件号" class='card-inpt' bindinput="bindKeyInput" maxlength="18" value="{{value}}" wx:if="{{identity_index==2}}"/>
+          <icon class="iconfont icon-tianjia" bindtap="addCardInfo" wx:if="{{identity_index==0}}" />
+          <view class='select_main' wx:if="{{select_identity}}">
+            <view data-name="{{item.name}}" data-index="{{item.index}}" wx:for="{{identity_list}}" wx:key="{{item.index}}" bindtap='identity_checked'>
+            {{item.name}}
+            </view>
+          </view>
+        </view>
+        <button class='card-btn' disabled="{{disabled}}" style="opacity:{{opacity}};color: white; background-color: #1f8de3;" bindtap='cardSubmit'>下一步</button>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="card-tab">
+        <view class="section-card" bindtap='nextArea'>
+          <input class='unit-inpt' placeholder="选择业务归属地" bindinput="areaTap" maxlength="18"  disabled="{{disabled}}" value='{{item.city_name}}{{item.area_name}}'/>
+          <icon class="iconfont icon-iconfontjiantou5" />
+          <div class="inpt_mask"></div>
+        </view>
+        <view class="section-card" bindtap='nextUnit'>
+          <input type="idcard" class='unit-inpt' placeholder="选择执收单位" maxlength="18"  disabled="{{disabled}}" value='{{item2.unit_name}}'/>
+          <icon class="iconfont icon-iconfontjiantou5" />
+          <div class="inpt_mask"></div>
+        </view>
+        <button class='card-btn' disabled="{{disabled}}" style="opacity:{{opacity}};color: white; background-color: #1f8de3;" bindtap='cardSubmit2'>下一步</button>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view class="card_infobox" wx:if="{{cardDialog==true}}">
+    <radio-group class="radio-group" bindchange="radioChange">
+      <radio class="card_infobox_row" wx:for="{{userInfo}}" wx:key="{{item.payment_card}}" value="{{item.payment_card}}" data-card="{{item.payment_card}}" checked="{{item.checked}}" color="#fff">
+        <view class='card_name'>{{item.payment_name}}</view>
+        <view class='card_number'>{{item.payment_card}}</view>
+        <view class='card_number'>{{item.payment_phone}}</view>
+      </radio>
+    </radio-group>
+  </view>
+  <view class='maskbox' wx:if="{{cardDialog}}" bindtap='cancleEven'></view> 
+</view>

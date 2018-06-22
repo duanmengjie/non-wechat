@@ -1,0 +1,12 @@
+<view class='unit-select'>
+  <view class='search_box'>
+    <input type='text' class='search_txt' placeholder='搜索' />
+    <icon class='iconfont icon-search'></icon>
+  </view>
+  <view class='area_sit'>
+    <view class='sitname' wx:for="{{unit_detail}}" wx:key="{{item.id}}" bindtap='checkedTap' data-region_number="{{item.region_number}}" data-id="{{item.id}}" data-unit_name="{{item.receipt_name}}" data-receipt_number="{{item.receipt_number}}">
+      <text class='{{id==item.id?"active":""}}'>{{item.receipt_name}}</text>
+      <icon class='iconfont {{id==item.id?"icon-finish":""}}'></icon>
+    </view>
+  </view>
+</view>

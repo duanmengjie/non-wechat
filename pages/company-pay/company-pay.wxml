@@ -1,0 +1,86 @@
+<view>
+  <view class="topbar">
+    <view class="head_info">
+      <image src="../../images/user.png"></image>
+      <text class='head_name'>{{unitno}}</text>
+      <text class='head_card'>{{userinfo.user_card}}</text>
+    </view>
+    <view class='count_page'>
+      <view class='count_row'>
+        <text class='count_number'>{{countNumber.count}}条</text>
+        <text class='count_txt'>总待缴费条目</text>
+      </view>
+      <view class='count_row'>
+        <text class='count_number'>￥{{countNumber.mCount}}</text>
+        <text class='count_txt'>总待缴费金额</text>
+      </view>
+    </view>
+  </view>
+  <view class='nav_list'>
+    <view class='nav_main' wx:for="{{list}}" wx:key="{{item.paymentClassifyType}}">
+      <view class='nav_row'>
+        <label class='selectAll' bindtap='selectSingerOne' data-index="{{index}}" data-checked="{{!selectSingerOne}}" data-oneid="{{item.paymentClassifyType}}">
+          <icon class='iconfont {{item.isSelect==true? "icon-guanbi":"icon-danxuan-weixuan"}}'></icon>
+        </label>
+        <image src="../../images/homepage_icon_car.png" class='iconImg' style='width:54rpx; height: 47rpx;'></image>
+        <text class='nav_row_name'>{{item.paymentClassifyName}}</text>
+        <text class='nav_row_number'>{{item.demandNoteMobileEntitys.length}}条</text>
+      </view>
+      <view class='nav_cospan' wx:for="{{item.demandNoteMobileEntitys}}" wx:key="{{item.projectname}}">
+        <view class='nav_cospan_row'>
+          <label class='selectAll' catchtap="selectSingerTwo" data-type="{{item.paymentClassifyType}}" data-index="{{index}}">
+            <icon class='iconfont {{item.isSelect2==true?"icon-guanbi":"icon-danxuan-weixuan"}}'></icon>
+          </label>
+          <view class='nav_cospan_border' bindtap='dialogMsg' data-uniquenessCode="{{item.uniquenessCode}}">
+            <view class='nav_cospan_box'>
+              <text class='nav_row_name'>{{item.projectName}}</text>
+              <text class='nav_row_number'>{{item.ticketDate}}</text>
+            </view>
+            <view class='nav_cospan_money'>￥{{item.money}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='footer_page'>
+    <label class='selectAll'>
+      <icon class='iconfont {{selectAll==true ? "icon-guanbi":"icon-danxuan-weixuan"}}' bindtap='selectAll'></icon>全选
+    </label>
+    <button class='payment_btn'>缴费({{totalNumber}})</button>
+    <view class='count_money'>
+      合计：
+      <text>￥{{totalMoney}}</text>
+    </view>
+  </view>
+  <!--详情弹框  -->
+  <view class='maskbox' wx:if="{{is_show}}"></view>
+  <view class="details_box" wx:if="{{is_show}}">
+    <view class="modo_content2_head">
+      <text>交通罚款</text>
+      <icont class="iconfont icon-guanbi1" bindtap="closeEven"></icont>
+    </view>
+    <view class="details_box_list">
+      <view class="details_box_row">
+        <view>缴款码：</view> 
+      </view>
+      <view class="details_box_row">
+        <view>车牌号码：</view>{{detailInfo.carNumber}}
+      </view>
+      <view class="details_box_row">
+        <view>车牌颜色：</view>{{detailInfo.carNumberColor}}
+      </view>
+      <view class="details_box_row">
+        <view>车辆类型：</view>{{detailInfo.carType}}
+      </view>
+      <view class="details_box_row">
+        <view>违章类型：</view>{{detailInfo.violationType}}
+      </view>
+      <view class="details_box_row">
+        <view>违章地点：</view>{{detailInfo.violationAddress}}
+      </view>
+      <view class="details_box_row">
+        <view>车牌时间：</view>{{detailInfo.violationDate}}
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,51 @@
+.voucher_page{
+  background: #fff;
+  border-top: solid 1px #e4e4e4;
+  border-bottom: solid 1px #e4e4e4;
+  margin-top: 20rpx;
+  padding: 20rpx 30rpx;
+}
+.voucher_row{
+  display: block;
+  font-size: 32rpx;
+  color: #000;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.voucher_row .voucher_title{
+  display: inline-block;
+  width: 275rpx;
+  color: #888;
+}
+.footer_page {
+  background: #fff;
+  width: 100%;
+  height: 98rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.footer_page .count_money{
+  float: left;
+  height: 98rpx;
+  line-height: 98rpx; 
+  color: #4d4d4d;
+  font-size: 34rpx;
+  margin-right: 20rpx;
+  padding-left: 20rpx; 
+}
+.footer_page .count_money text{
+  color: #ff5b05;
+}
+.footer_page .payment_btn{
+  float: right;
+  width: 170rpx;
+  height: 98rpx;
+  line-height: 98rpx; 
+  background: #1f8de3;
+  border-radius: 0;
+  color: #fff;
+  font-size: 34rpx;
+  padding: 0;
+}

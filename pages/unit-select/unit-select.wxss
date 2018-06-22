@@ -1,0 +1,46 @@
+.search_box{
+  width: 90%;
+  margin: 20rpx auto;
+  position: relative;
+}
+.search_box .search_txt{
+  display: block;
+  height: 56rpx;
+  line-height: 56rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  color: #bbbbbb;
+  font-size: 26rpx;
+  padding-left: 20rpx;
+  border: solid 1px #e6e6ea;
+}
+.search_box .icon-search{
+  position: absolute;
+  right: 10rpx;
+  top: -10rpx;
+  z-index: 20;
+  color: #bbbbbb;
+}
+.area_sit{
+  display: block;
+  background: #fff;
+  border-top: solid 1rpx #e5e5e5;
+}
+.area_sit .sitname{
+  display: block;
+  box-sizing:border-box;
+  border-bottom: solid 1rpx #e5e5e5;
+  height: 87rpx;
+  line-height: 87rpx;
+  font-size: 34rpx;
+  position: relative;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.area_sit .sitname .active{
+  color: #1f8de3;
+}
+.area_sit .sitname .icon-finish{
+  float: right;
+  color: #1f8de3;
+}

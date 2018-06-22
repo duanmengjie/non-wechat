@@ -1,0 +1,133 @@
+.add-item{
+  margin-top: 21rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 30rpx; 
+  width: 100%;
+  height: 88rpx;
+  border-top: 1rpx solid #e4e4e4;
+  border-bottom: 1rpx solid #e4e4e4;
+  line-height: 88rpx;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+.icon-tianjia{
+  display: block;
+  font-size: 48rpx;
+  color: #1f8de3;
+}
+.add-name{
+  font-size: 34rpx;
+  margin-left: 18rpx;
+  color: #000000;
+}
+
+ /* .add-title{
+  width: 100%;
+  height: 87rpx;
+  padding: 40rpx 0 21rpx 30rpx;
+  box-sizing: border-box;
+  border-top: 1rpx solid #e4e4e4;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+.people-name{
+  line-height: 26rpx;
+  font-size: 28rpx;
+}  */
+
+.item-list{
+  display: flex;
+  justify-content: space-between;
+  padding: 24rpx 30rpx 22rpx 31rpx;
+  box-sizing: border-box; 
+  border-bottom: 1rpx solid #e5e5e5;
+  background: #fff;
+}
+
+.item-family{
+  line-height: 25rpx;
+  font-size: 26rpx;
+  color: #888888;
+  margin-top: 18rpx;
+}
+.item-content-name{
+  line-height: 32rpx;
+  font-size: 34rpx;
+  color: #000000;
+}
+.item-modify{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item-modify .iconfont{
+  color: #888888;
+  font-size: 46rpx;
+}
+.icon-jilu{
+  display: flex;
+  font-size: 60rpx;
+}
+.item-odd{
+  width: 120rpx;
+  height: 60rpx;
+  border-radius: 6rpx;
+  background: #f4333c;
+  text-align: center;
+  line-height: 60rpx;
+  color: #fff;
+  font-size: 26rpx;
+}
+
+/*fuzhide  */
+.item-box{  
+    width: 700rpx;  
+    margin: 0 auto;  
+    padding:40rpx 0;  
+}  
+.items{  
+    width: 100%;  
+}  
+.item{  
+    position: relative;  
+    border-top: 2rpx solid #eee;  
+    height: 120rpx;  
+    line-height: 120rpx;  
+    overflow: hidden;  
+}  
+.item:last-child{  
+    border-bottom: 2rpx solid #eee;  
+}  
+.inner{  
+    position: absolute;  
+    top:0;  
+}  
+.inner.txt{  
+    background-color: #fff;  
+    width: 100%;  
+    z-index: 5;  
+    padding:0 10rpx;  
+    transition: left 0.2s ease-in-out;  
+    white-space:nowrap;  
+    overflow:hidden;  
+    text-overflow:ellipsis;  
+}  
+.inner.del{  
+    background-color: #e64340;  
+    width: 180rpx;text-align: center;  
+    z-index: 4;  
+    right: 0;  
+    color: #fff  
+}  
+.item-icon{  
+    width: 64rpx;  
+    vertical-align: middle;  
+    margin-right: 16rpx  
+}  
+.thumb{  
+    width: 200px;  
+    height: 200px;  
+    -webkit-overflow-scrolling: touch;  
+    overflow: scroll;  
+}  

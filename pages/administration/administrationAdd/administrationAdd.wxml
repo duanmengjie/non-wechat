@@ -1,0 +1,24 @@
+<view class='view-content'>
+  <view class='item-list'>
+    <view class='item-content'>
+      <view class='item-name'>姓名</view>
+      <input type='text' bindblur='changeValueBlur1' class='item-input' placeholder='请输入完整姓名' value='{{postname}}'/>
+    </view>
+  </view>
+  <view class='item-list'>
+    <view class='item-content'>
+      <view class='item-name'><text>*</text> 身份证号</view>
+      <input type='idcard' value='{{postcard}}' class='item-input' placeholder='请输入证件号' maxlength="18" placeholder-class='placeholders' bindblur='changeValueBlur2'/>
+    </view>
+  </view>
+  <view class='item-list'>
+    <view class='item-content' style='border: none;'>
+      <view class='item-name'>手机号</view>
+      <input type='number' value='{{postphone}}' class='item-input' maxlength="11" placeholder='请输入手机号' bindblur='changeValueBlur3'/>
+    </view>
+  </view>
+</view>
+
+<view type="default" class='btn' bindtap='handlePost'>
+  <view class='btn-click'>保存</view>
+</view>

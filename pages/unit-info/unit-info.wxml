@@ -1,0 +1,29 @@
+<view class='unit-page'>
+  <view class='unit_txt1'>
+    {{unit_name}}
+  </view>
+  <view class='from_page'>
+    <!-- <view class='frow_row'>
+      <text class='unit_title'>姓名</text>
+      <input type='text' class='unit_txt2' placeholder='请输入完整姓名' />
+    </view> -->
+    <view class='frow_row' bindtap='selectTap'>
+      <text class='unit_title'>证件类型</text>
+      <input type='text' class='unit_txt2' placeholder='请选择证件类型' value='{{typeName}}' />
+      <icon class='iconfont icon-iconfontjiantou5'></icon>
+    </view>
+    <view class='frow_row' style="border-bottom:0;">
+      <text class='unit_title'>证件号</text>
+      <input type='text' class='unit_txt2' placeholder='请输入证件号' bindinput="bindKeyInput" value="{{paperwork}}"/>
+    </view>
+  </view>
+  <button class='unit-btn' disabled="{{disabled}}" style="opacity:{{opacity}};color: white; background-color: #1f8de3;" bindtap='cardSubmit'>下一步</button>
+
+  <view class="card_infobox" wx:if="{{type_show}}">
+    <radio-group class="radio-group" bindchange="radioChange">
+      <radio class="card_infobox_row" wx:for="{{items}}" wx:key="{{item.name}}" value="{{item.name}}"  checked="{{item.checked}}" color="#fff">
+        <view class='card_name'>{{item.name}}</view>
+      </radio>
+    </radio-group>
+  </view>
+</view>

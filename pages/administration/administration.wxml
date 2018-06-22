@@ -1,0 +1,24 @@
+<view class='all'>
+  <view class='add-item' catchtap='handleClickNav'>
+    <icon class='iconfont icon-tianjia' bindtap="addCardInfo" />
+    <view class='add-name'>添加缴款人</view>
+  </view>
+
+  <!-- <view class='add-title'>
+    <view class='people-name'>缴款人列表</view>
+  </view> -->
+
+   <block wx:for='{{arrays}}' wx:for-item='item' wx:key='{{item.id}}' wx:for-index='idx'> 
+    <view class='item-list' bindtouchstart="mytouchstart" bindtouchend="mytouchend" bindtap="editAddress" data-postId="{{item.id}}">
+      <view class='item-content'>
+        <view class='item-content-name'>{{item.payment_name}}</view>
+        <view class='item-family item-content-id'>身份证 {{item.payment_card}}</view>
+        <view class='item-family item-content-phone'>手机号 {{item.payment_phone}}</view>
+      </view>
+      <view class='item-modify'>
+        <icon class='iconfont .icon-xiugai07' wx:if="{{uhide != item.id}}" data-postId="{{item.id}}" data-phone="{{item.payment_phone}}" data-name="{{item.payment_name}}" data-card="{{item.payment_card}}" catchtap='handleClickModify'/>
+        <view class='item-odd' wx:if="{{uhide == item.id}}" catchtap='handleCilckOdd'>删除</view>
+      </view>
+    </view>
+   </block>
+</view>

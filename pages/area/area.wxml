@@ -1,0 +1,18 @@
+<view class='area_page' wx:for="{{area}}" wx:key="{{item.id}}">
+  <view class='province on'>{{item.name}}</view>
+  <view class='area_box'>
+    <view class='left_box'>
+      <view class='area_city' wx:for="{{item.city}}" wx:key="{{item}}">
+        <view class='city_name {{on_show==item.id ? "active":""}}' catchtap='cityTap' data-id="{{item.id}}" data-area="{{item.area}}" data-name="{{item.name}}">{{item.name}}</view>
+      </view>
+    </view>
+     <view class='right_box'>
+      <view class='area_sit'>
+        <view class='sitname' wx:for="{{qu_area}}" wx:key="{{item.id}}" catchtap='areaTap' data-id="{{item.id}}" data-name="{{item.name}}">
+          <text class='{{area_id==item.id ? "active":""}}'>{{item.name}}</text>
+          <icon class='iconfont {{area_id==item.id ? "icon-finish":""}}'></icon>
+        </view>
+      </view>
+    </view> 
+  </view>
+</view>

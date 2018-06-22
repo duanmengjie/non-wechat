@@ -1,0 +1,4 @@
+<view class='no_data'>
+  <image src='../../images/info.png'></image>
+  <text>暂无信息喔</text>
+</view>

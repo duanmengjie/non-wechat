@@ -1,0 +1,270 @@
+.topbar {
+  width: 100%;
+  height: 200rpx;
+  background: -moz-linear-gradient(to bottom, #1f8de3, #2f9cf1, #3eaaff);
+  background: -webkit-linear-gradient(to bottom, #1f8de3, #2f9cf1, #3eaaff);
+  background: -o-linear-gradient(to bottom, #1f8de3, #2f9cf1, #3eaaff);
+  background: -ms-linear-gradient(to bottom, #1f8de3, #2f9cf1, #3eaaff);
+  background: linear-gradient(to bottom, #1f8de3, #2f9cf1, #3eaaff);
+  position: relative;
+  margin-bottom: 105rpx;
+}
+
+.head_info {
+  padding: 40rpx 30rpx 0;
+  height: 78rpx;
+}
+
+.head_info image {
+  width: 78rpx;
+  height: 78rpx;
+  margin-right: 20rpx;
+  float: left;
+}
+
+.head_info .head_name {
+  display: block;
+  color: #fff;
+  font-size: 32rpx;
+  margin-bottom: 10rpx;
+}
+
+.head_info .head_card {
+  display: block;
+  color: #8ed1ff;
+  font-size: 24rpx;
+}
+
+.count_page {
+  width: 80%;
+  height: 120rpx;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  margin-left: -40%;
+  bottom: -80rpx;
+  box-shadow: 0 2px 6px 0 #ccc;
+}
+
+.count_row {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  padding-top: 25rpx;
+}
+
+.count_row .count_number {
+  color: #000;
+  font-size: 34rpx;
+  display: block;
+}
+
+.count_row .count_txt {
+  color: #888;
+  font-size: 24rpx;
+  display: block;
+}
+
+.nav_list {
+  display: block;
+}
+.nav_main{
+  display: block;
+  border-top: solid 1px #e4e4e4;
+  border-bottom: solid 1px #e4e4e4;
+  background: #fff;
+  margin-bottom: 22rpx;
+}
+.nav_row{
+  display: block;
+  padding: 0 30rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  overflow:hidden;
+}
+.nav_row .iconImg{
+  width: 44rpx;
+  height: 37rpx;
+  vertical-align: middle;
+  margin-left: 10rpx;
+}
+.nav_row .selectAll {
+  color: #4d4d4d;
+  font-size: 34rpx;
+  line-height: 98rpx;
+  float: left;
+}
+.nav_row .selectAll .iconfont{
+  font-size: 60rpx;
+  color: #e4e4e4;
+  vertical-align: middle;
+  margin-right: 10rpx;
+} 
+.nav_row .selectAll .icon-guanbi{
+  color: #1f8de3;
+}
+.nav_row .nav_row_name{
+  display: inline-block;
+  color: #000;
+  font-size: 34rpx;
+  margin-left: 10rpx;
+}
+.nav_row .nav_row_number{
+  float: right;
+  color: #888888;
+  font-size: 28rpx;
+}
+.nav_main .nav_cospan{
+  display: block;
+  padding: 0 30rpx;
+  border-top: solid 1px #e4e4e4;
+}
+.nav_cospan_row{
+  display: block;
+  overflow: hidden;
+  
+}
+.nav_cospan_border{
+  overflow: hidden;
+  border-bottom: solid 1px #e4e4e4;
+}
+.nav_cospan_row:nth-last-child(1) .nav_cospan_border{
+  border-bottom: 0;
+}
+.nav_cospan_row .selectAll {
+  color: #4d4d4d;
+  font-size: 34rpx;
+  line-height: 98rpx;
+  float: left;
+}
+.nav_cospan_row .selectAll .iconfont{
+  font-size: 60rpx;
+  color: #e4e4e4;
+  vertical-align: middle;
+  margin-right: 10rpx;
+} 
+.nav_cospan_row .selectAll .icon-guanbi{
+  color: #1f8de3;
+}
+.nav_cospan_row .nav_cospan_box{
+  display: inline-block;
+  padding: 10rpx 0 10rpx 70rpx;
+}
+.nav_cospan_row .nav_cospan_box .nav_row_name{
+  display: block;
+  color: #4d4d4d;
+  font-size: 34rpx;
+  line-height: 60rpx;
+}
+.nav_cospan_row .nav_cospan_box .nav_row_number{
+  display: block;
+  color: #bbbbbb;
+  font-size: 24rpx;
+  line-height: 60rpx;
+}
+.nav_cospan_row .nav_cospan_money{
+  color: #ff5b05;
+  float: right;
+  padding-top: 28rpx;
+}
+
+
+.footer_page {
+  background: #fff;
+  width: 100%;
+  height: 98rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.footer_page .selectAll {
+  color: #4d4d4d;
+  font-size: 34rpx;
+  padding-left: 30rpx;
+  line-height: 98rpx;
+  float: left;
+}
+
+.footer_page .selectAll .iconfont{
+  font-size: 60rpx;
+  color: #e4e4e4;
+  vertical-align: -9rpx;
+  margin-right: 10rpx;
+} 
+.footer_page .selectAll .icon-guanbi{
+  color: #1f8de3;
+}
+.footer_page .count_money{
+  float: right;
+  height: 98rpx;
+  line-height: 98rpx; 
+  color: #4d4d4d;
+  font-size: 34rpx;
+  margin-right: 20rpx;
+}
+.footer_page .count_money text{
+  color: #ff5b05;
+}
+.footer_page .payment_btn{
+  float: right;
+  width: 170rpx;
+  height: 98rpx;
+  line-height: 98rpx; 
+  background: #1f8de3;
+  border-radius: 0;
+  color: #fff;
+  font-size: 34rpx;
+  padding: 0;
+}
+.maskbox{
+  background: #000;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+  z-index: 100;
+}
+.details_box{
+  display: block;
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 101;
+}
+.modo_content2_head{
+  text-align: center;
+  line-height: 88rpx;
+  position: relative;
+  font-size: 34rpx;
+}
+.modo_content2_head .icon-guanbi1{
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 44rpx;
+  padding-right: 30rpx;
+}
+.details_box .details_box_list{
+  display: block;
+  padding-left: 30rpx;
+  padding-bottom: 20rpx;
+}
+.details_box .details_box_list .details_box_row{
+  display: block;
+  font-size: 34rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  color: #000;
+}
+.details_box .details_box_list .details_box_row view{
+  display: inline-block;
+  color: #888;
+}
+
+

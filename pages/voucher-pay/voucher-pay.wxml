@@ -1,0 +1,39 @@
+<view>
+  <view class='voucher_page'>
+    <view class='voucher_row'>
+      <view class='voucher_title'>缴款码：</view>{{paymentCodeInfo.paymentCode}}
+    </view>
+    <view class='voucher_row'>
+      <view class='voucher_title'>缴款名称：</view>{{paymentCodeInfo.projectname}}
+    </view>
+    <view class='voucher_row'>
+      <view class='voucher_title'>执收单位名称：</view>{{paymentCodeInfo.misistryName}}
+    </view>
+    <view class='voucher_row'>
+      <view class='voucher_title'>缴款金额合计：</view>xx
+    </view>
+    <view class='voucher_row'>
+      <view class='voucher_title'>缴款书金额：</view>{{paymentCodeInfo.money}}
+    </view>
+    <view class='voucher_row'>
+      <view class='voucher_title'>滞纳金：</view>{{paymentCodeInfo.lateFee}}
+    </view>
+    <view class='voucher_row'>
+      <view class='voucher_title'>缴(付)款人全称：</view>112512451541
+    </view>
+    <view class='voucher_row'>
+      <view class='voucher_title'>缴款状态：</view>
+      <text wx:if="{{paymentCodeInfo.paymentState==0}}">未交款</text>
+      <text wx:else="{{paymentCodeInfo.paymentState==1}}">已交款</text>
+    </view>
+    <view class='voucher_row'>
+      <view class='voucher_title'>填制时间：</view>{{paymentCodeInfo.fillingTime}}
+    </view>
+  </view>
+  <view class='footer_page'>
+    <view class='count_money'>
+      <text>￥223.00</text>
+    </view>
+    <button class='payment_btn'>缴费</button>
+  </view>
+</view>

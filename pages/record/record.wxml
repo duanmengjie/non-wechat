@@ -1,0 +1,41 @@
+<view class='record-title'>
+  <view class='record-class' bindtap='handeClickHide'>
+    <view style='color: {{bgcolor}}'>{{classifyname}}</view>
+    <icon class='iconfont {{hide?"icon-quanxianfuzhi":"icon-arrow_down_full"}}'></icon>
+  </view>
+  <!-- <view class='record-seo'>搜索</view> -->
+</view>
+
+<view class='add-title'>
+  <view class='people-name'>本月缴费： ￥{{currPrice}}</view>
+</view>
+
+<view>
+  <scroll-view scroll-y="true">
+    <view class='item' wx:for="{{contentlist}}" wx:key="{{item.user_id}}">
+      <view class='item-content'>
+        <view class='item-icon'>
+          <image src='{{url}}{{item.img1}}'></image>
+          <view class='item-name'>{{item.project_name}}</view>
+        </view>
+        <view class='item-title'>[{{item.project_name}}]</view>
+        <view class='item-date'>{{item.handle_date}}</view>
+      </view>
+      <view class='item-details'>
+        <view class='item-money'>￥{{item.money}}</view>
+        <view class='item-btn'>查看票据</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+  
+<view class='show_toast' wx:if="{{nodata}}">暂无数据 ~</view>
+
+<view wx:if="{{hide}}" bindtap='closeEvent'>
+  <view class='list-class'>
+     <view class='list-item' wx:for="{{list}}" wx:key="{{item.id}}" data-type="{{item.paymentClassifyType}}" data-name="{{item.paymentClassifyName}}" catchtap='selectedType'>
+      <image src="{{item.img2}}"></image>
+      <view class='list-name'>{{item.paymentClassifyName}}</view>
+    </view> 
+  </view>
+</view>

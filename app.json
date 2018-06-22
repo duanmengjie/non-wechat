@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/administration/administration",
+    "pages/record/record",
+    "pages/unit-pay/unit-pay",
+    "pages/payment/payment",
+    "pages/voucher-pay/voucher-pay",
+    "pages/area/area",
+    "pages/unit-info/unit-info",
+    "pages/unit-select/unit-select",
+    "pages/logs/logs",
+    "components/no_data/no_data",
+    "pages/add/add",
+    "pages/administration/administrationAdd/administrationAdd",
+    "pages/company-pay/company-pay"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1f8de3",
+    "navigationBarTitleText": "电子缴费",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./images/icon1@2x.png",
+        "selectedIconPath": "./images/icon2@2x.png"
+      },
+      {
+        "pagePath": "pages/administration/administration",
+        "text": "缴款人管理",
+        "iconPath": "./images/icon3@2x.png",
+        "selectedIconPath": "./images/icon4@2x.png"
+      },
+      {
+        "pagePath": "pages/record/record",
+        "text": "缴费记录",
+        "iconPath": "./images/icon5@2x.png",
+        "selectedIconPath": "./images/icon6@2x.png"
+      }
+    ],
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "selectedColor": "#1f8de3"
+  }
+}

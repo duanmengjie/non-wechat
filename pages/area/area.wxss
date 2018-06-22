@@ -1,0 +1,94 @@
+.area_page{
+  width: 100%;
+  height: 100%;
+  background: #f5f5f9;
+  overflow: hidden;
+  position: relative;
+}
+.area_box{
+  width: 100%;
+  height:-moz-calc(100% - 88rpx);
+	height:-webkit-calc(100% - 88rpx);
+	height: calc(100% - 88rpx);
+  overflow:hidden;
+  background: #fff;
+}
+.province{
+  display: block;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding-left: 30rpx;
+  color: #000000;
+  font-size: 34rpx;
+}
+.on{
+  background: #fff;
+}
+.area_box .left_box{
+  width: 210rpx;
+	height: 100%;
+  overflow-x: hidden;
+  position: absolute;
+  left: 0;
+  top: 88rpx;
+  background: #f5f5f9;
+  color: #000000;
+  font-size: 34rpx;
+}
+.area_box .right_box{
+  /* width: 100%; */
+  width:-moz-calc(100% - 210rpx);
+	width:-webkit-calc(100% - 210rpx);
+	width: calc(100% - 210rpx);
+	height: 100%;
+  padding-left: 210rpx;
+  background: #fff;
+  overflow-x:hidden;
+}
+.area_box .area_city{
+  display: block;
+  padding-left: 30rpx;
+}
+.area_box .area_city .city_name{
+  display: block;
+  height: 88rpx;
+  line-height: 88rpx;
+  width:180rpx;
+}
+.active{
+  background: #fff;
+  color: #1f8de3;
+}
+.area_rightbox{
+  padding-left: 210rpx;
+  height: 100%;
+  background: #fff;
+}
+.area_sit{
+  display: block;
+  padding-left: 30rpx;
+}
+.area_sit .sitname{
+  display: block;
+  box-sizing:border-box;
+  border-bottom: solid 1rpx #e5e5e5;
+  height: 87rpx;
+  line-height: 87rpx;
+  font-size: 34rpx;
+  position: relative;
+  padding-right: 30rpx;
+}
+.area_sit .active{
+  color: #1f8de3;
+}
+ .area_sit .icon-finish{
+  color: #1f8de3;
+  /* position: absolute;
+  right: 30rpx;
+  top: 0; */
+  font-size: 36rpx;
+  float: right;
+} 
+.area_sit .current{
+  color: #1f8de3;
+}

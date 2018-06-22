@@ -1,0 +1,45 @@
+<view>
+  <view class="topbar">
+    <view class="head_info">
+      <image src="../../images/user.png"></image>
+      <view class='head_name'>{{user_Info.user_name}} <view class='unit_name'>{{unit_name}}</view></view>
+      <view class='head_card'>{{user_Info.user_card}}</view>
+    </view>
+  </view>
+  <view class='nav_list'>
+    <view class='nav_main'>
+      <!-- <view class='nav_row'>
+        <label class='selectAll' bindtap='selectSingerOne'>
+          <icon class='iconfont'></icon>
+        </label>
+        <image src="../../images/homepage_icon_car.png" class='iconImg' style='width:54rpx; height: 47rpx;'></image>
+        <text class='nav_row_name'></text>
+        <text class='nav_row_number'>条</text>
+      </view> -->
+      <view class='nav_cospan'>
+        <view class='nav_cospan_row' wx:for="{{personInfo}}" wx:key="{{item.id}}">
+          <label class='selectAll' data-isselect="{{item.isSelect}}" data-index="{{index}}" bindtap="selectSinger">
+            <icon class='iconfont {{item.isSelect==true?"icon-guanbi":"icon-danxuan-weixuan"}}'></icon>
+          </label>
+          <view class='nav_cospan_border' bindtap='dialogMsg'>
+            <view class='nav_cospan_box'>
+              <text class='nav_row_name'>{{item.pay_name}}</text>
+              <text class='nav_row_number'>截止时间：{{item.pay_deadline}}</text>
+            </view>
+            <view class='nav_cospan_money'>￥{{item.pay_price}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='footer_page'>
+    <label class='selectAll' bindtap='allSelectEvent'>
+      <icon class='iconfont {{isAllSelect?"icon-guanbi":"icon-danxuan-weixuan"}}' bindtap='selectAll'></icon>全选
+    </label>
+    <button class='payment_btn'>缴费({{isSize}})</button>
+    <view class='count_money'>
+      合计：
+      <text>￥{{totalMoney}}</text>
+    </view>
+  </view>
+</view>
